@@ -1,0 +1,5 @@
+title: SkillController
+modelClass: Avirdigital\Elm\Models\Skill
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

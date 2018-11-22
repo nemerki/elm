@@ -1,0 +1,95 @@
+title = "About"
+url = "/about"
+layout = "layoutPage"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[RecordList skill]
+modelClass = "Avirdigital\Elm\Models\Skill"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+sortDirection = "desc"
+whereIsActive = 1
+
+[RecordList work]
+modelClass = "Avirdigital\Elm\Models\Work"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+whereIsActive = 1
+==
+<!-- About Us Start Here -->
+<div class="about-us   pt-sm-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="sidebar-img mb-all-30">
+                    <img src="{{ this.theme.aboute_img.path }}" class="img-responsive" alt="single-blog-img">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-desc">
+                    <h3 class="mb-10 about-title">{{ 'About our success story'|_ }}</h3>
+                    <div class="mb-20">{{ this.theme.aboute_text|raw }}</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- About Us End Here -->
+
+<!-- About Us Skills Start Here -->
+<div class="about-skill ptb-100 ptb-sm-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="about-title mb-20">{{ 'Our skills'|_ }}</h3>
+                <div class="skill-progress mb-all-40">
+                    {% for rec in skill.records %}
+                        <div class="progress">
+                            <div class="skill-title">{{ rec.name }}  {{ rec.percent }}%</div>
+                            <div class="progress-bar wow fadeInLeft" data-wow-delay="0.2s" role="progressbar"
+                                 style="width: {{ rec.percent }}%; visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ht-single-about">
+                    <h3 class="about-title mb-20">{{ 'our works'|_ }}</h3>
+                    {% for rec in work.records %}
+                        <div class="ht-about-work">
+                            <span>{{ loop.index }}</span>
+                            <div class="ht-work-text">
+                                <h5><a href="#">{{ rec.title }}</a></h5>
+                                <p>{{ rec.description }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- About Us Skills End Here -->

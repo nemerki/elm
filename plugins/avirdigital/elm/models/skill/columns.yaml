@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: 'avirdigital.elm::lang.all.name'
+        type: text
+        searchable: true
+        sortable: true
+    percent:
+        label: 'avirdigital.elm::lang.skill.percent'
+        type: text
+        searchable: true
+        sortable: true

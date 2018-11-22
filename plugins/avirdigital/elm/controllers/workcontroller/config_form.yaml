@@ -1,0 +1,11 @@
+name: WorkController
+modelClass: Avirdigital\Elm\Models\Work
+form: $/avirdigital/elm/models/work/fields.yaml
+defaultRedirect: avirdigital/elm/workcontroller
+create:
+    redirect: 'avirdigital/elm/workcontroller/update/:id'
+    redirectClose: avirdigital/elm/workcontroller
+update:
+    redirect: avirdigital/elm/workcontroller
+    redirectClose: avirdigital/elm/workcontroller
+preview: {  }

@@ -1,0 +1,80 @@
+<div class="col-xl-3 col-lg-4 d-none d-lg-block">
+    <div class="vertical-menu mb-all-30">
+        <nav>
+            <ul class="vertical-menu-list">
+                {% for category in maincat %}
+                   {# {% if  category.sub_id != 0 %}
+
+                    {% endif %}#}
+
+
+
+                    <li>
+                        <a href="{{ 'category'|page({ slug: category.slug }) }}">{{ category.name }}
+
+                                {% if  category.subcat  is not empty  %}
+                                    <i class="fa fa-angle-right" aria-hidden="true">
+
+                                    </i>
+                                {% endif %}
+
+
+
+                        </a>
+                        {% if  category.subcat  is not empty  %}
+                            <!-- Vertical Mega-Menu Start -->
+                            <ul class="ht-dropdown megamenu first-megamenu top{{ loop.index }}">
+                                <!-- Single Column Start -->
+                                <li class="single-megamenu">
+                                    <ul>
+
+                                        {% for cat in category.subcat  %}
+                                            <li><a href="{{ 'category'|page({ slug: cat.slug }) }}">{{ cat.name }}</a></li>
+                                        {% endfor %}
+
+
+                                    </ul>
+
+                                </li>
+                                <!-- Single Column End -->
+
+                                <!-- Single Megamenu Image Start -->
+                                <li class="megamenu-img">
+                                    <a href="shop.html"><img class="img-responsive"
+                                            src="{{ category.image.path }}"
+                                            alt="menu-image"></a>
+                                </li>
+                                <!-- Single Megamenu Image End -->
+                            </ul>
+                            <!-- Vertical Mega-Menu End -->
+                        {% endif %}
+
+                    </li>
+
+
+                {% endfor %}
+
+
+
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+    <style>
+        .first-megamenu li.megamenu-img{
+            flex-basis: auto !important;
+
+        }
+        .megamenu-img a img{
+            max-width: 100% !important;
+        }
+        .first-megamenu li.single-megamenu{
+            width: 30% !important;
+            flex-basis: auto !important;
+        }
+    </style>
+
+

@@ -1,0 +1,5 @@
+title: SupportController
+modelClass: Avirdigital\Elm\Models\Support
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

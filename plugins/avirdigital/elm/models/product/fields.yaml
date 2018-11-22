@@ -1,0 +1,32 @@
+fields:
+    is_active:
+        label: 'avirdigital.elm::lang.all.status'
+        span: full
+        default: 1
+        type: switch
+    name:
+        label: 'avirdigital.elm::lang.all.name'
+        span: auto
+        type: text
+    category_id:
+        label: 'avirdigital.elm::lang.praduct.category'
+        span: auto
+        type: category_id
+    short_description:
+        label: 'avirdigital.elm::lang.praduct.short_description'
+        span: full
+        type: text
+    description:
+        label: 'avirdigital.elm::lang.praduct.description'
+        span: full
+        size: ''
+        type: richeditor
+    image:
+        label: 'avirdigital.elm::lang.praduct.image'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

@@ -1,0 +1,199 @@
+title = "Homepage"
+url = "/"
+layout = "layoutHome"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[RecordList client]
+modelClass = "Avirdigital\Elm\Models\Client"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+sortDirection = "asc"
+whereIsActive = 1
+
+[RecordList partner]
+modelClass = "Avirdigital\Elm\Models\Partner"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+sortDirection = "asc"
+whereIsActive = 1
+
+[RecordList project2]
+modelClass = "Avirdigital\Elm\Models\Project"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+whereIsActive = 1
+take = 1
+
+[RecordList project]
+modelClass = "Avirdigital\Elm\Models\Project"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+whereIsActive = 1
+take = 15
+skip = 2
+==
+<!-- Hot Deal Products Start Here -->
+<div class="hot-deal-products off-white-bg pb-45  pb-sm-50">
+    <div class="container">
+        <!-- Product Title Start -->
+        <div class="post-title pb-30">
+            <h2>{{ 'TƏRƏFDAŞLARIMIZ'|_ }}</h2>
+        </div>
+        <!-- Product Title End -->
+        <!-- Hot Deal Product Activation Start -->
+        <div class="hot-deal-active owl-carousel">
+            {% for rec in partner.records %}
+                <!-- Single Product Start -->
+                <div class="single-product">
+                    <!-- Product Image Start -->
+                    <div class="pro-img" style="height: 220px; display: flex; align-items: center">
+
+                            <img class="primary-img" src="{{ rec.logo| resize(900, 410) }}" alt="single-product">
+
+
+                    </div>
+                    <!-- Product Image End -->
+                    <!-- Product Content Start -->
+                    <div class="pro-content">
+                        <div class="pro-info">
+                            <h4> {{ rec.name }}</h4>
+
+                        </div>
+
+                    </div>
+                    <!-- Product Content End -->
+                </div>
+                <!-- Single Product End -->
+            {% endfor %}
+
+
+        </div>
+        <!-- Hot Deal Product Active End -->
+
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Hot Deal Products End Here -->
+
+<!-- Arrivals Products Area Start Here -->
+<div class="arrivals-product pb-85 pt-10 pb-sm-45">
+    <div class="container">
+        <div class="section-ttitle">
+            <h2>{{ 'LAYİHƏLƏRİMİZ'|_ }} </h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 order-2 order-lg-1">
+                <div class="banner-site-box mt-10">
+                    {% for rec in project2.records %}
+                        <!-- Single Product Start -->
+                        <div class="single-product mt-20">
+                            <!-- Product Image Start -->
+                            <div class="pro-img">
+                                <a href="{{ 'project'|page({ slug:rec.slug  }) }}">
+                                    <img height="310px" class="primary-img" src="{{ rec.image|  resize(false, 310, { mode: 'crop', quality: '80', extension: 'png' }) }}"
+                                         alt="single-product">
+                                </a>
+
+                            </div>
+                            <!-- Product Image End -->
+                            <!-- Product Content Start -->
+                            <div class="pro-content">
+                                <div class="pro-info">
+                                    <h4><a href="{{ 'project'|page({ slug:rec.slug  }) }}">{{ rec.title }}</a></h4>
+
+                                </div>
+                            </div>
+                            <!-- Product Content End -->
+                            <span class="sticker-new">new</span>
+                        </div>
+                        <!-- Single Product End -->
+                    {% endfor %}
+
+                </div>
+            </div>
+
+
+            
+            <div class="col-lg-7 order-1 order-lg-2">
+                <!-- Arrivals Product Activation Start Here -->
+                <div class="electronics-pro-active2 owl-carousel">
+                    <!-- Double Product Start -->
+                    {% for rec in project.records %}
+                        <!-- Single Product Start -->
+                        <div class="single-product">
+                            <!-- Product Image Start -->
+                            <div class="pro-img">
+                                <a href="{{ 'project'|page({ slug: rec.slug }) }}">
+                                    <img class="primary-img" src="{{ rec.image|  resize(false, 310, { mode: 'crop', quality: '80', extension: 'png' }) }}"
+                                         alt="single-product">
+                                </a>
+
+                            </div>
+                            <!-- Product Image End -->
+                            <!-- Product Content Start -->
+                            <div class="pro-content">
+                                <div class="pro-info">
+                                    <h4><a href="product.html">{{ rec.title }}</a></h4>
+
+                                </div>
+
+                            </div>
+                            <!-- Product Content End -->
+
+                        </div>
+                        <!-- Single Product End -->
+
+                    {% endfor %}
+
+                    <!-- Double Product End -->
+
+                </div>
+                <!-- Arrivals Product Activation End Here -->
+            </div>
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Arrivals Products Area End Here -->
+<section class="five">
+    <div class="container">
+        <div class="text1">
+            <h3 class="center-align">OUR CLIENTS</h3>
+            <hr>
+        </div>
+        <div class="owl-carousel owl-theme">
+
+            {% for rec in client.records %}
+                <div class="item"><img style="max-height: 90px" src="{{ rec.logo| resize(auto, 90) }}" alt=""></div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

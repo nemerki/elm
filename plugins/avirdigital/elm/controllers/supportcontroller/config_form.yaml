@@ -1,0 +1,10 @@
+name: SupportController
+form: $/avirdigital/elm/models/support/fields.yaml
+modelClass: Avirdigital\Elm\Models\Support
+defaultRedirect: avirdigital/elm/supportcontroller
+create:
+    redirect: 'avirdigital/elm/supportcontroller/update/:id'
+    redirectClose: avirdigital/elm/supportcontroller
+update:
+    redirect: avirdigital/elm/supportcontroller
+    redirectClose: avirdigital/elm/supportcontroller

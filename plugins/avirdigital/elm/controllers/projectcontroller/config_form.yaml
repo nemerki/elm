@@ -1,0 +1,10 @@
+name: ProjectController
+form: $/avirdigital/elm/models/project/fields.yaml
+modelClass: Avirdigital\Elm\Models\Project
+defaultRedirect: avirdigital/elm/projectcontroller
+create:
+    redirect: 'avirdigital/elm/projectcontroller/update/:id'
+    redirectClose: avirdigital/elm/projectcontroller
+update:
+    redirect: avirdigital/elm/projectcontroller
+    redirectClose: avirdigital/elm/projectcontroller

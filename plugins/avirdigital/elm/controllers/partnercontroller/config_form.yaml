@@ -1,0 +1,11 @@
+name: PartnerController
+modelClass: Avirdigital\Elm\Models\Partner
+form: $/avirdigital/elm/models/partner/fields.yaml
+defaultRedirect: avirdigital/elm/partnercontroller
+create:
+    redirect: 'avirdigital/elm/partnercontroller/update/:id'
+    redirectClose: avirdigital/elm/partnercontroller
+update:
+    redirect: avirdigital/elm/partnercontroller
+    redirectClose: avirdigital/elm/partnercontroller
+preview: {  }

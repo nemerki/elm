@@ -1,0 +1,10 @@
+name: SkillController
+form: $/avirdigital/elm/models/skill/fields.yaml
+modelClass: Avirdigital\Elm\Models\Skill
+defaultRedirect: avirdigital/elm/skillcontroller
+create:
+    redirect: 'avirdigital/elm/skillcontroller/update/:id'
+    redirectClose: avirdigital/elm/skillcontroller
+update:
+    redirect: avirdigital/elm/skillcontroller
+    redirectClose: avirdigital/elm/skillcontroller

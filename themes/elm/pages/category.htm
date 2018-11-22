@@ -1,0 +1,128 @@
+title = "Category"
+url = "/category/:slug/:page?"
+layout = "layoutPage"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[Category]
+==
+<!-- Breadcrumb End -->
+        <!-- Shop Page Start -->
+        <div class="main-shop-page  pb-100 ptb-sm-60">
+            <div class="container">
+                <!-- Row End -->
+                <div class="row">
+                  
+                    <!-- Product Categorie List Start -->
+                    <div class="col-md-12">
+                        <!-- Grid & List View Start -->
+                        <div class="grid-list-top border-default universal-padding d-md-flex justify-content-md-between align-items-center mb-30">
+                            <div class="grid-list-view  mb-sm-15">
+                                <ul class="nav tabs-area d-flex align-items-center">
+                                    <li><a class="active" data-toggle="tab" href="#grid-view"><i class="fa fa-th"></i></a></li>
+                                    <li><a data-toggle="tab" href="#list-view"><i class="fa fa-list-ul"></i></a></li>
+                                </ul>
+                            </div>
+                          
+                            <!-- Toolbar Short Area Start -->
+                   {#         <div class="main-toolbar-sorter clearfix">
+                                <div class="toolbar-sorter d-flex align-items-center">
+                                    <label>Show:</label>
+                                    <select class="sorter wide">
+                                        <option value="12">12</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="75">75</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                            </div>#}
+                            <!-- Toolbar Short Area End -->
+                        </div>
+                        <!-- Grid & List View End -->
+                        <div class="main-categorie mb-all-40">
+                            <!-- Grid & List Main Area End -->
+                            <div class="tab-content fix">
+                                <div id="grid-view" class="tab-pane fade show active">
+                                    <div class="row">
+                                        {% for rec in products %}
+                                            <!-- Single Product Start -->
+                                            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                                                <div class="single-product">
+                                                    <!-- Product Image Start -->
+                                                    <div class="pro-img" style="text-align: center">
+                                                        <a href="product.html">
+                                                            <img style="height: 220px; width: auto;" class="primary-img" src="{{ rec.image| resize(218, 256) }}" alt="single-product">
+                                                        </a>
+
+                                                    </div>
+                                                    <!-- Product Image End -->
+                                                    <!-- Product Content Start -->
+                                                    <div class="pro-content">
+                                                        <div class="pro-info">
+                                                            <h4><a href="{{ 'product'|page({ slug: rec.slug }) }}">{{ rec.name }}</a></h4>
+                                                            <p>{{ rec.short_description }}</p>
+                                                            <a class="pull-right" href="{{ 'product'|page({ slug: rec.slug }) }}">Ətraflı</a>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- Product Content End -->
+                                                </div>
+                                            </div>
+                                            <!-- Single Product End -->
+                                        {% endfor %}
+
+
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                                <!-- #grid view End -->
+                                <div id="list-view" class="tab-pane fade">
+                                    {% for rec in products %}
+                                    <!-- Single Product Start -->
+                                    <div class="single-product">
+                                        <div class="row">
+                                            <!-- Product Image Start -->
+                                            <div class="col-lg-4 col-md-5 col-sm-12">
+                                                <div class="pro-img">
+                                                    <a href="{{ 'product'|page({ slug: rec.slug }) }}">
+                                                         <img class="primary-img" src="{{ rec.image| resize(218, 256) }}" alt="single-product">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- Product Image End -->
+                                            <!-- Product Content Start -->
+                                            <div class="col-lg-8 col-md-7 col-sm-12">
+                                                <div class="pro-content hot-product2">
+                                                    <h4><a href="{{ 'product'|page({ slug: rec.slug }) }}">{{ rec.name }}</a></h4>
+
+                                                    <p>{{ rec.short_description }}</p>
+                                                        <a class="pull-right" href="{{ 'product'|page({ slug: rec.slug }) }}">{{ 'Ətraflı'|_ }}</a>
+
+                                                </div>
+                                            </div>
+                                            <!-- Product Content End -->
+                                        </div>
+                                    </div>
+                                    <!-- Single Product End -->
+                                    {% endfor %}
+                                </div>
+                                <!-- #list view End -->
+                                <div class="pro-pagination">
+                                    {{ products.records.render|raw }}
+
+                                </div>
+                                <!-- Product Pagination Info -->
+                            </div>
+                            <!-- Grid & List Main Area End -->
+                        </div>
+                    </div>
+                    <!-- product Categorie List End -->
+                </div>
+                <!-- Row End -->
+            </div>
+            <!-- Container End -->
+        </div>
+        <!-- Shop Page End -->

@@ -1,0 +1,6 @@
+columns:
+    title:
+        label: 'avirdigital.elm::lang.project.title'
+        type: text
+        searchable: true
+        sortable: true

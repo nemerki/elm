@@ -1,0 +1,5 @@
+title: KategoryController
+modelClass: Avirdigital\Elm\Models\Kategory
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

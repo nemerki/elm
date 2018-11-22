@@ -1,0 +1,228 @@
+<header>
+    <!-- Header Top Start Here -->
+    <div class="header-top-area">
+        <div class="container">
+            <!-- Header Top Start -->
+            <div class="header-top">
+                <ul>
+                    <li><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'az'">AZ</a></li>
+                    <li><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">EN</a></li>
+                    <li><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">RU</a></li>
+                    {#<li><span>Language</span> <a href="#">AZ<i class="lnr lnr-chevron-down"></i></a>
+                        <!-- Dropdown Start -->
+                        <ul class="ht-dropdown">
+
+                            <li><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'az'">AZ</a></li>
+                            <li><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'EN'">EN</a></li>
+                            <li><a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">RU</a></li>
+
+                        </ul>#}
+
+                    <!-- Dropdown End -->
+                    </li>
+
+                </ul>
+                <ul>
+                    {% if this.theme.facebook %}
+                        <li><a href="{{ this.theme.facebook }}"><i class="fa fa-facebook size"
+                                                                   aria-hidden="true"></i></a></li>
+                    {% endif %}
+
+
+
+                    {% if this.theme.twitter %}
+
+                        <li><a href="{{ this.theme.twitter }}"><i class="fa fa-twitter size" aria-hidden="true"></i></a>
+                        </li>
+
+                    {% endif %}
+
+
+                    {% if this.theme.instagram %}
+
+                        <li><a href="{{ this.theme.instagram }}"><i class="fa fa-google-plus-official size"
+                                                                    aria-hidden="true"></i></a></li>
+
+
+
+                    {% endif %}
+
+                    {% if this.theme.youtube %}
+                        <li>
+                            <a href="{{ this.theme.youtube }}" target="_blank">
+
+                                <i class="fa fa-youtube-play size"></i>
+
+                            </a>
+                        </li>
+                    {% endif %}
+
+
+                </ul>
+            </div>
+            <!-- Header Top End -->
+        </div>
+        <!-- Container End -->
+    </div>
+    <!-- Header Top End Here -->
+    <!-- Header Middle Start Here -->
+    <div class="header-middle ptb-15">
+        <div class="container">
+            <div class="row align-items-center no-gutters">
+                <div class="col-lg-3 col-md-12">
+                    <div class="logo mb-all-30">
+                        <a href="{{ 'homepage'|page }}"><img src="{{ this.theme.site_logo.path }}" alt="logo-image"></a>
+                    </div>
+                </div>
+                <!-- Categorie Search Box Start Here -->
+                <div class="col-lg-6 col-md-8 ml-auto mr-auto col-10">
+                    <div class="categorie-search-box">
+                        {#   <form action="#">
+                               <div class="form-group">
+                                   <select class="bootstrap-select" name="poscats">
+                                       <option value="0">All categories</option>
+                                       <option value="2">Arrivals</option>
+                                       <option value="3">Cameras</option>
+                                       <option value="4">Cords and Cables</option>
+                                       <option value="5">gps accessories</option>
+                                       <option value="6">Microphones</option>
+                                       <option value="7">Wireless Transmitters</option>
+                                       <option value="8">GamePad</option>
+                                       <option value="9">cube lifestyle hd</option>
+                                       <option value="10">Bags</option>
+                                       <option value="11">Bottoms</option>
+                                       <option value="12">Shirts</option>
+                                       <option value="13">Tailored</option>
+                                       <option value="14">Home &amp; Kitchen</option>
+                                       <option value="15">Large Appliances</option>
+                                       <option value="16">Armchairs</option>
+                                       <option value="17">Bunk Bed</option>
+                                       <option value="18">Mattress</option>
+                                       <option value="19">Sideboard</option>
+                                       <option value="20">Small Appliances</option>
+                                       <option value="21">Bootees Bags</option>
+                                       <option value="22">Jackets</option>
+                                       <option value="23">Shelf</option>
+                                       <option value="24">Shoes</option>
+                                       <option value="25">Phones &amp; Tablets</option>
+                                       <option value="26">Tablet</option>
+                                       <option value="27">phones</option>
+                                   </select>
+                               </div>
+                               <input type="text" name="search" placeholder="I’m looking for...">
+                               <button><i class="lnr lnr-magnifier"></i></button>
+                           </form>#}
+
+
+                        <form action="{{ 'search' | page }}" method="get">
+                            <input name="q" type="text" value="{{ q }}" placeholder="{{ 'axtar'|_ }}"
+                                   autocomplete="off">
+                            <button type="submit"><i class="lnr lnr-magnifier"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Categorie Search Box End Here -->
+                <!-- Cart Box Start Here -->
+                <div class="col-lg-3 col-md-12">
+                    <div class="cart-box mt-all-30">
+                        <ul class="d-flex justify-content-lg-end justify-content-center align-items-center">
+                            <li class="a">
+                                <i class="lnr lnr-phone-handset f"></i> {{ 'Phone'|_ }}: {{ this.theme.mobile }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Cart Box End Here -->
+            </div>
+            <!-- Row End -->
+        </div>
+        <!-- Container End -->
+    </div>
+    <!-- Header Middle End Here -->
+    <!-- Header Bottom Start Here -->
+    <div class="header-bottom  header-sticky">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 vertical-menu d-none d-lg-block">
+                    <span class="categorie-title">{{ 'Shop by Categories '|_ }}</span>
+                </div>
+                <div class="col-xl-9 col-lg-8 col-md-12 ">
+                    <nav class="d-none d-lg-block">
+                        <ul class="header-bottom-list d-flex">
+                            <li class="active"><a href="index.html">{{ 'ANA SƏHİFƏ'|_ }}</a></li>
+                            <li><a href="{{ 'about'|page }}">{{ 'HAQQIMIZDA'|_ }}</a></li>
+                            <li><a href="{{ 'xidmetler'|page }}">{{ 'XİDMƏTLƏR'|_ }}</a></li>
+                            <li><a href="{{ 'kampanyalar'|page }}">{{ 'KAMPANİYALAR'|_ }}</a></li>
+
+                        </ul>
+                    </nav>
+                    <div class="mobile-menu d-block d-lg-none">
+                        <nav>
+                            <ul class="header-bottom-list d-flex">
+                                <li class="active"><a href="index.html">ANA SƏHİFƏ</a></li>
+                                <li><a href="{{ 'about'|page }}">{{ 'HAQQIMIZDA'|_ }}</a></li>
+                                <li><a href="{{ 'xidmetler'|page }}">{{ 'XİDMƏTLƏR'|_ }}</a></li>
+                                <li><a href="{{ 'kampanyalar'|page }}">{{ 'KAMPANİYALAR'|_ }}</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Row End -->
+        </div>
+        <!-- Container End -->
+    </div>
+    <!-- Header Bottom End Here -->
+    <!-- Mobile Vertical Menu Start Here -->
+    <div class="container d-block d-lg-none">
+        <div class="vertical-menu mt-30">
+            <span class="categorie-title mobile-categorei-menu">{{ 'Shop by Categories'|_ }}</span>
+            <nav>
+                <div id="cate-mobile-toggle"
+                     class="category-menu sidebar-menu sidbar-style mobile-categorei-menu-list menu-hidden ">
+                    <ul>
+                        {% for category in maincat %}
+                            {% if  category.subcat  is not empty %}
+                            <li class="has-sub"><a
+                                    href="{{ 'category'|page({ slug: category.slug }) }}">{{ category.name }}</a>
+
+                                    <ul class="category-sub">
+                                        <li class="has-sub"><a href="shop.html">Office chair</a>
+                                            <ul class="category-sub">
+                                                <li><a href="shop.html">Bibendum Cursus</a></li>
+                                                <li><a href="shop.html">Dignissim Turpis</a></li>
+                                                <li><a href="shop.html">Dining room</a></li>
+                                                <li><a href="shop.html">Dining room</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub"><a href="shop.html">Purus Lacus</a>
+                                            <ul class="category-sub">
+                                                <li><a href="shop.html">Magna Pellentesq</a></li>
+                                                <li><a href="shop.html">Molestie Tortor</a></li>
+                                                <li><a href="shop.html">Vehicula Element</a></li>
+                                                <li><a href="shop.html">Sagittis Blandit</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="shop.html">gps accessories</a></li>
+                                        <li><a href="shop.html">Microphones</a></li>
+                                        <li><a href="shop.html">Wireless Transmitters</a></li>
+                                    </ul>
+                                    <!-- category submenu end-->
+
+                            </li>
+                            {% endif %}
+                            {% if  category.subcat  is empty %}
+                                <li><a href="{{ 'category'|page({ slug: cat.slug }) }}">{{ category.name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+
+
+                    </ul>
+                </div>
+                <!-- category-menu-end -->
+            </nav>
+        </div>
+    </div>
+    <!-- Mobile Vertical Menu Start End -->
+</header>

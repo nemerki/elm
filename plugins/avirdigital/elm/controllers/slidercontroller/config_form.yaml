@@ -1,0 +1,10 @@
+name: SliderController
+form: $/avirdigital/elm/models/slider/fields.yaml
+modelClass: Avirdigital\Elm\Models\Slider
+defaultRedirect: avirdigital/elm/slidercontroller
+create:
+    redirect: 'avirdigital/elm/slidercontroller/update/:id'
+    redirectClose: avirdigital/elm/slidercontroller
+update:
+    redirect: avirdigital/elm/slidercontroller
+    redirectClose: avirdigital/elm/slidercontroller

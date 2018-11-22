@@ -1,0 +1,19 @@
+<div class="form-group  widget-field span-full ">
+
+
+    <select style="width: 100%;"  name=" <?= $name ?>" id="s2">
+        <option value="0">Main Category</option>
+        <?php foreach($category as $key => $val){ ?>
+        <option  <?= $key==$value ?'selected="selected"':'' ;?> value="<?= $key ?>"> <?= $val ?></option>
+        <?php } ?>
+    </select>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#s2").select2({
+            placeholder: 'Add Colors'
+        });
+    });
+
+</script>

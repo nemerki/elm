@@ -1,0 +1,11 @@
+name: DiscountController
+modelClass: Avirdigital\Elm\Models\Discount
+form: $/avirdigital/elm/models/discount/fields.yaml
+defaultRedirect: avirdigital/elm/discountcontroller
+create:
+    redirect: 'avirdigital/elm/discountcontroller/update/:id'
+    redirectClose: avirdigital/elm/discountcontroller
+update:
+    redirect: avirdigital/elm/discountcontroller
+    redirectClose: avirdigital/elm/discountcontroller
+preview: {  }

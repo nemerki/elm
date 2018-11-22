@@ -1,0 +1,20 @@
+<div class="support-area bdr-top">
+    <div class="container">
+        <div class="d-flex flex-wrap text-center">
+            {% for rec in partialsRecords %}
+                <div class="single-support">
+                    <div class="support-icon">
+                        <img style="max-height: 60px" src="{{ rec.icon| resize(150, 60) }}" alt="">
+                    </div>
+                    <div class="support-desc">
+                        <h6>{{ rec.name }}</h6>
+                        <span>{{ rec.description }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+    <!-- Container End -->
+</div>

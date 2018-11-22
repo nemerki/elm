@@ -1,0 +1,10 @@
+name: ClientController
+form: $/avirdigital/elm/models/client/fields.yaml
+modelClass: Avirdigital\Elm\Models\Client
+defaultRedirect: avirdigital/elm/clientcontroller
+create:
+    redirect: 'avirdigital/elm/clientcontroller/update/:id'
+    redirectClose: avirdigital/elm/clientcontroller
+update:
+    redirect: avirdigital/elm/clientcontroller
+    redirectClose: avirdigital/elm/clientcontroller

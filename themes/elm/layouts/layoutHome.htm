@@ -1,0 +1,97 @@
+[RecordList slider]
+modelClass = "Avirdigital\Elm\Models\Slider"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "link"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+whereIsActive = 1
+take = 10
+
+[RecordList support]
+modelClass = "Avirdigital\Elm\Models\Support"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+sortDirection = "asc"
+whereIsActive = 1
+
+[renderForm]
+formCode = "contact-form"
+
+[Nav]
+
+[localePicker]
+forceUrl = 0
+==
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    {% partial "layouts/head" %}
+
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Main Wrapper Start Here -->
+<div class="wrapper">
+
+    <!-- Main Header Area Start Here -->
+    {% partial "layouts/header" %}
+
+
+    <!-- Main Header Area End Here -->
+    <!-- Categorie Menu & Slider Area Start Here -->
+
+
+    <div class="main-page-banner pb-50 off-white-bg">
+        <div class="container">
+            <div class="row">
+                <!-- Vertical Menu Start Here -->
+                {% partial "layouts/sidebar" %}
+                <!-- Vertical Menu End Here -->
+                <!-- Slider Area Start Here -->
+                {% partial "layouts/slider" partialsRecords = slider.records %}
+
+
+                <!-- Slider Area End Here -->
+            </div>
+            <!-- Row End -->
+        </div>
+        <!-- Container End -->
+    </div>
+
+
+    <!-- Categorie Menu & Slider Area End Here -->
+    {% page %}
+    <!-- Support Area Start Here -->
+ {% partial "layouts/support"  partialsRecords = support.records %}
+
+    <!-- Support Area End Here -->
+    <!-- Footer Area Start Here -->
+    {% partial "layouts/footer" %}
+
+    <!-- Footer Area End Here -->
+
+</div>
+<!-- Main Wrapper End Here -->
+
+{% partial "layouts/foot" %}
+
+</body>
+
+</html>

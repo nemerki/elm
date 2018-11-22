@@ -1,0 +1,10 @@
+name: GroupController
+form: $/avirdigital/elm/models/group/fields.yaml
+modelClass: Avirdigital\Elm\Models\Group
+defaultRedirect: avirdigital/elm/groupcontroller
+create:
+    redirect: 'avirdigital/elm/groupcontroller/update/:id'
+    redirectClose: avirdigital/elm/groupcontroller
+update:
+    redirect: avirdigital/elm/groupcontroller
+    redirectClose: avirdigital/elm/groupcontroller

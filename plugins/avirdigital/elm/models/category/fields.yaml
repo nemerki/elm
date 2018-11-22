@@ -1,0 +1,16 @@
+fields:
+    is_active:
+        label: 'avirdigital.elm::lang.all.status'
+        span: full
+        default: 1
+        type: switch
+    name:
+        label: 'avirdigital.elm::lang.all.name'
+        span: full
+        type: text
+    group:
+        label: 'avirdigital.elm::lang.category.group'
+        span: full
+        nameFrom: name
+        descriptionFrom: description
+        type: relation

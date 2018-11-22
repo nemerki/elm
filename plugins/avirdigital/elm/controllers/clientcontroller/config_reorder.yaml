@@ -1,0 +1,5 @@
+title: ClientController
+modelClass: Avirdigital\Elm\Models\Client
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

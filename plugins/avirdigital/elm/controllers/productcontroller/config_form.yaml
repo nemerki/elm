@@ -1,0 +1,11 @@
+name: ProductController
+modelClass: Avirdigital\Elm\Models\Product
+form: $/avirdigital/elm/models/product/fields.yaml
+defaultRedirect: avirdigital/elm/productcontroller
+create:
+    redirect: 'avirdigital/elm/productcontroller/update/:id'
+    redirectClose: avirdigital/elm/productcontroller
+update:
+    redirect: avirdigital/elm/productcontroller
+    redirectClose: avirdigital/elm/productcontroller
+preview: {  }

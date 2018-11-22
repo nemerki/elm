@@ -1,0 +1,41 @@
+title = "Search"
+url = "/search"
+layout = "layoutPage"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[Search]
+==
+<section class="one" style="padding-top: 0;">
+    <div class="container">
+        <h3>{{ 'Axtarış Neticeleri'|_ }}</h3>
+        <div class="row">
+            {% for rec in products %}
+                <div class="col-md-3">
+                    <div class="single-product">
+                        <!-- Product Image Start -->
+                        <div class="pro-img">
+                            <a href="{{ 'product'|page({ slug:rec.slug  }) }}">
+                                <img class="primary-img" src="{{ rec.image| resize(250, 250, { mode: 'crop', quality: '80', extension: 'png' }) }}" alt="single-product">
+
+                            </a>
+                        </div>
+                        <!-- Product Image End -->
+                        <!-- Product Content Start -->
+                        <div class="pro-content" style="height: 200px;">
+                            <div class="pro-info">
+                                <h4><a href="{{ 'product'|page({ slug:rec.slug  }) }}">{{ rec.name }}</a></h4>
+                                <p>{{ rec.short_description }}</p>
+                            </div>
+
+                        </div>
+                        <!-- Product Content End -->
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,62 @@
+title = "product"
+url = "/product/:slug"
+layout = "layoutPage"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[builderDetails product]
+modelClass = "Avirdigital\Elm\Models\Product"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Record not found"
+==
+<div class="main-product-thumbnail  pb-40 ptb-sm-60">
+    <div class="container">
+        <div class="thumb-bg">
+            <div class="row">
+                <!-- Main Thumbnail Image Start -->
+                <div class="col-lg-5 mb-all-40">
+                    <!-- Thumbnail Large Image start -->
+                    <div class="tab-content">
+                        <div id="thumb1" class="tab-pane fade show active">
+                            <a data-fancybox="images" href="img/products/kamp2.jpg.jpg"><img
+                                    src="{{ record.image| resize(218, 256) }}" alt="product-view"></a>
+                        </div>
+
+                    </div>
+                    <!-- Thumbnail Large Image End -->
+
+                </div>
+                <!-- Main Thumbnail Image End -->
+                <!-- Thumbnail Description Start -->
+                <div class="col-lg-7">
+                    <div class="thubnail-desc fix">
+                        <h3 class="product-header">{{ record.name }}</h3>
+
+                    {#    <div class="pro-price mtb-30">
+                            <p class="d-flex align-items-center"><span class="prev-price">16.51</span><span
+                                    class="price">$15.19</span><span class="saving-price">save 8%</span></p>
+                        </div>#}
+                        <div class="mb-20 pro-desc-details">{{ record.description|raw }}</div>
+
+
+                       {# <div class="socila-sharing mt-25">
+                            <ul class="d-flex">
+                                <li>share</li>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>#}
+                    </div>
+                </div>
+                <!-- Thumbnail Description End -->
+            </div>
+            <!-- Row End -->
+        </div>
+    </div>
+    <!-- Container End -->
+</div>

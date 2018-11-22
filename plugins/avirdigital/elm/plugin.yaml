@@ -1,0 +1,128 @@
+plugin:
+    name: 'avirdigital.elm::lang.plugin.name'
+    description: 'avirdigital.elm::lang.plugin.description'
+    author: Avirdigital
+    icon: oc-icon-adn
+    homepage: ''
+permissions:
+    manage_elm:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_elm'
+    manage_product:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_product'
+    manage_category:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_catedory'
+    manage_group:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.group'
+    manage_partner:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_partner'
+    manage_client:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_client'
+    manage_support:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.support'
+    manage_slider:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_slider'
+    manage_discount:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_discount'
+    manage_project:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.project'
+    manage_skill:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_skill'
+    manage_work:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.manage_work'
+    manage_service:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.service'
+    manage_kategory:
+        tab: 'avirdigital.elm::lang.permision.elm'
+        label: 'avirdigital.elm::lang.permision.kategory'
+navigation:
+    main-menu-elm:
+        label: 'avirdigital.elm::lang.menu.elm'
+        url: avirdigital/elm/productcontroller
+        icon: icon-adn
+        permissions:
+            - manage_elm
+        order: '99'
+        sideMenu:
+            side-menu-product:
+                label: 'avirdigital.elm::lang.menu.product'
+                url: avirdigital/elm/productcontroller
+                icon: icon-shopping-cart
+                permissions:
+                    - manage_product
+            side-menu-kategory:
+                label: 'avirdigital.elm::lang.menu.kategory'
+                url: avirdigital/elm/kategorycontroller
+                icon: icon-sitemap
+                permissions:
+                    - manage_kategory
+            side-menu-partner:
+                label: 'avirdigital.elm::lang.menu.partner'
+                url: avirdigital/elm/partnercontroller
+                icon: icon-thumbs-up
+                permissions:
+                    - manage_partner
+            side-menu-client:
+                label: 'avirdigital.elm::lang.menu.client'
+                url: avirdigital/elm/clientcontroller
+                icon: icon-users
+                permissions:
+                    - manage_client
+            side-menu-support:
+                label: 'avirdigital.elm::lang.menu.support'
+                url: avirdigital/elm/supportcontroller
+                icon: icon-info
+                permissions:
+                    - manage_support
+            side-menu-slider:
+                label: 'avirdigital.elm::lang.menu.slider'
+                url: avirdigital/elm/slidercontroller
+                icon: icon-sliders
+                permissions:
+                    - manage_slider
+            side-menu-discount:
+                label: 'avirdigital.elm::lang.menu.discount'
+                url: avirdigital/elm/discountcontroller
+                icon: icon-euro
+                permissions:
+                    - manage_discount
+            side-menu-project:
+                label: 'avirdigital.elm::lang.menu.project'
+                url: avirdigital/elm/projectcontroller
+                icon: icon-yelp
+                permissions:
+                    - manage_project
+            side-menu-skill:
+                label: 'avirdigital.elm::lang.menu.skill'
+                url: avirdigital/elm/skillcontroller
+                icon: icon-strikethrough
+                permissions:
+                    - manage_skill
+            side-menu-work:
+                label: 'avirdigital.elm::lang.menu.work'
+                url: avirdigital/elm/workcontroller
+                icon: icon-won
+                permissions:
+                    - manage_work
+            side-menu-setting:
+                label: 'System Settings'
+                url: /cms/themeoptions/update/elm
+                icon: icon-gears
+            side-menu-service:
+                label: 'avirdigital.elm::lang.menu.service'
+                url: avirdigital/elm/servicecontroller
+                icon: icon-space-shuttle
+                permissions:
+                    - manage_service

@@ -1,0 +1,29 @@
+fields:
+    is_active:
+        label: 'avirdigital.elm::lang.all.status'
+        span: full
+        default: 1
+        type: switch
+    title:
+        label: 'avirdigital.elm::lang.project.title'
+        span: full
+        type: text
+    description:
+        label: 'avirdigital.elm::lang.all.description'
+        size: ''
+        span: full
+        type: textarea
+    content:
+        label: 'avirdigital.elm::lang.project.content'
+        size: ''
+        span: full
+        type: richeditor
+    image:
+        label: 'avirdigital.elm::lang.all.image'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload

@@ -1,0 +1,103 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+tabs:
+    fields:
+
+        site_name:
+            label: Site name
+            comment: The website name as it should appear on the front-end
+            tab: General informations
+            default: ELM Group
+            readOnly: true
+            span: auto
+
+        author:
+            label: Author
+            tab: General informations
+            readOnly: true
+            comment: Website Author Company
+            default: Avirdigital
+            span: auto
+
+        copyright_text:
+            label: Copyright
+            comment: The copyright text as it should appear on the footer bottom side
+            tab: General informations
+            default: ELM Group
+            span: auto
+
+        address:
+            label: Address
+            type: textarea
+            tab: Contact informations
+            span: full
+
+        mobile:
+            label: Mobile number
+            tab: Contact informations
+            span: auto
+
+        email:
+            label: E-mail
+            tab: Contact informations
+            span: auto
+
+        facebook:
+            label: Facebook
+            tab: Contact informations
+            span: auto
+
+        youtube:
+            label: Youtube
+            tab: Contact informations
+            span: auto
+
+        twitter:
+            label: Twitter
+            tab: Contact informations
+            span: auto
+
+        instagram:
+            label: Instagram
+            tab: Contact informations
+            span: auto
+
+        site_logo:
+            label: Site logo
+            comment: The logo will be used in the website <b><i>(80x75)</i></b>
+            commentHtml: true
+            required: true
+            tab: Logos
+            type: fileupload
+            mode: image
+            span: auto
+            imageHeight: 75
+            imageWidth: 80
+            filetypes: svg
+
+        aboute_img:
+            label: Image
+            comment: The logo will be used in the website <b><i>(570x400)</i></b>
+            commentHtml: true
+            required: true
+            tab: About
+            type: fileupload
+            mode: image
+            span: auto
+
+
+        aboute_text:
+            label: Text
+            span: auto
+            tab: About
+            type: richeditor
+
+
+
+
+
+
+
+

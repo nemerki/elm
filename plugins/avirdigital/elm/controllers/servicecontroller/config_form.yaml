@@ -1,0 +1,10 @@
+name: ServiceController
+form: $/avirdigital/elm/models/service/fields.yaml
+modelClass: Avirdigital\Elm\Models\Service
+defaultRedirect: avirdigital/elm/servicecontroller
+create:
+    redirect: 'avirdigital/elm/servicecontroller/update/:id'
+    redirectClose: avirdigital/elm/servicecontroller
+update:
+    redirect: avirdigital/elm/servicecontroller
+    redirectClose: avirdigital/elm/servicecontroller

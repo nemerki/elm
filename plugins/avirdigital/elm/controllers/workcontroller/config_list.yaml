@@ -1,0 +1,15 @@
+title: WorkController
+modelClass: Avirdigital\Elm\Models\Work
+list: $/avirdigital/elm/models/work/columns.yaml
+recordUrl: 'avirdigital/elm/workcontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: created_at
+    direction: desc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

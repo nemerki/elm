@@ -1,0 +1,10 @@
+name: KategoryController
+form: $/avirdigital/elm/models/kategory/fields.yaml
+modelClass: Avirdigital\Elm\Models\Kategory
+defaultRedirect: avirdigital/elm/kategorycontroller
+create:
+    redirect: 'avirdigital/elm/kategorycontroller/update/:id'
+    redirectClose: avirdigital/elm/kategorycontroller
+update:
+    redirect: avirdigital/elm/kategorycontroller
+    redirectClose: avirdigital/elm/kategorycontroller

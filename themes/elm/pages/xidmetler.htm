@@ -1,0 +1,54 @@
+title = "Xidmetler"
+url = "/xidmetler"
+layout = "layoutPage"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[RecordList service]
+modelClass = "Avirdigital\Elm\Models\Service"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "xidmet-detal"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+sortColumn = "created_at"
+sortDirection = "desc"
+whereIsActive = 1
+==
+<section class="one" style="padding-top: 0;">
+    <div class="container">
+        <h3>{{ 'Xidmetler'|_ }}</h3>
+        <div class="row">
+            {% for rec in service.records %}
+                <div class="col-md-3">
+                    <div class="single-product">
+                        <!-- Product Image Start -->
+                        <div class="pro-img">
+                            <a href="{{ 'xidmet-detal'|page({ slug:rec.slug  }) }}">
+                                <img class="primary-img" src="{{ rec.image| resize(218, 256) }}" alt="single-product">
+
+                            </a>
+                        </div>
+                        <!-- Product Image End -->
+                        <!-- Product Content Start -->
+                        <div class="pro-content">
+                            <div class="pro-info">
+                                <h4><a href="{{ 'xidmet-detal'|page({ slug:rec.slug  }) }}">{{ rec.title }}</a></h4>
+                                <p>{{ rec.description }}</p>
+                                <a class="pull-right" href="{{ 'xidmet-detal'|page({ slug:rec.slug  }) }}">Ətraflı</a>
+                            </div>
+
+                        </div>
+                        <!-- Product Content End -->
+                    </div>
+                </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</section>
